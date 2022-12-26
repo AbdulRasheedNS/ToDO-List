@@ -9,7 +9,7 @@ function App() {
     console.log(id);
     setToDos(toDos.filter((item) => item.id !== id));
   };
-  const listItems = (e, obj) => {
+  const changeStatus = (e, obj) => {
     console.log('checked', e.target.checked);
     console.log('obj before', obj);
     console.log('todos', toDos);
@@ -51,7 +51,7 @@ function App() {
               <div className="todo">
                 <div className="left">
                   <input
-                    onChange={(e) => listItems(e, obj)}
+                    onChange={(e) => changeStatus(e, obj)}
                     checked={obj.status} type="checkbox" name="" id="" />
                   <p> {obj.text}</p>
                 </div>
@@ -73,7 +73,7 @@ function App() {
               <div className="todo">
                 <div className="left">
                   <input
-                    onChange={(e) => listItems(e, obj)}
+                    onChange={(e) => changeStatus(e, obj)}
                     checked={obj.status} type="checkbox" name="" id="" />
                   <s><p><div className='successText'>{obj.text}</div></p></s>
                 </div>
