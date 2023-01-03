@@ -12,6 +12,7 @@
     top: 10%;
     left: 50%;
     transform: translate(-50%, -10%);
+    padding-top: 3rem;
   }
   
   .app .mainHeading h1 {
